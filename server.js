@@ -27,12 +27,12 @@ app.get('/todos', function (req, res) {
 // GET /todos/:id
 app.get('/todos/:id', function (req, res) {
 	var todoId = parseInt(req.params.id, 10);
-	var foundTodo;	
+	var foundTodo;
 
 	todos.forEach(function (todo) {
 		if (todo.id === todoId) {
 			foundTodo = todo;
-		} 
+		}
 	});
 
 	if (foundTodo) {
